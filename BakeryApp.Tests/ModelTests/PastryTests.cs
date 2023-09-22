@@ -24,13 +24,22 @@ namespace BakeryApp.Tests
     }
 
     [TestMethod]
-    public void CheckIfDivisibleByFour_ReturnsBoolFalse_Bool()
+    public void RetrieveUpToTwoFinalChars_TakesANumberAsStringReturningFinalTwoChars_String()
     {
-      int numPastriesOrdered = 2;
-      Pastry.NumOfPastries = numPastriesOrdered;
-      bool expectedAnswer = false;
-      bool divisibleByFourResult = Pastry.CheckIfDivisibleByFour(Pastry.NumOfPastries);
-      Assert.AreEqual(expectedAnswer, divisibleByFourResult);
-    }    
+      string numPastriesOrdered = "121";
+      string expectedResult = "21";
+      string actualSubstring = Pastry.RetrieveUpToTwoFinalChars(numPastriesOrdered);
+      Assert.AreEqual(expectedResult, actualSubstring);      
+    }
+
+    // [TestMethod]
+    // public void CheckIfDivisibleByFour_ReturnsBoolFalse_Bool()
+    // {
+    //   int numPastriesOrdered = 2;
+    //   Pastry.NumOfPastries = numPastriesOrdered;
+    //   bool expectedAnswer = false;
+    //   bool divisibleByFourResult = Pastry.CheckIfDivisibleByFour(Pastry.NumOfPastries);
+    //   Assert.AreEqual(expectedAnswer, divisibleByFourResult);
+    // }    
   }
 }
