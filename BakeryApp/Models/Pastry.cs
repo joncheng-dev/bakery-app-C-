@@ -6,6 +6,7 @@ namespace BakeryApp.Models
   {
     public static int NumOfPastries { get; set; } = 0;
 
+    // Passed in as a string, peels off two final digits, and returns them.
     public static string RetrieveUpToTwoFinalChars(string aNumberAsStringType)
     {
       if (2 >= aNumberAsStringType.Length)
@@ -20,11 +21,13 @@ namespace BakeryApp.Models
 
     public static bool CheckIfDivisibleByFour(int numberToCheck)
     {
+      // Number will now be a string
       string numberToString = numberToCheck.ToString();
       Console.WriteLine($"numberToString is type: {numberToString.GetType()}");
       Console.WriteLine($"numberToString length: {numberToString.Length}");
       // Peel off digits and set aside
       string lastTwoDigits = RetrieveUpToTwoFinalChars(numberToString);
+      // Two digits now converted to Int
       int convertedToInt = Convert.ToInt32(lastTwoDigits);
       Console.WriteLine($"lastTwoDigits converted to Int: {convertedToInt}");
       Console.WriteLine($"convertedToInt type: {convertedToInt.GetType()}");
@@ -41,6 +44,7 @@ namespace BakeryApp.Models
       }
     }
 
+    // NumOfPastries is an int
     public static int CalculatePastryCost()
     {
       int totalCost = 0;

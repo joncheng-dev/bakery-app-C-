@@ -1,17 +1,11 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using BakeryApp.Models;
-using System;
 
 namespace BakeryApp.Tests
 {
   [TestClass]
   public class PastryTests
   {
-    // public void Dispose()
-    // {
-    //   Pastry.NumOfPastries = 0;
-    // }
-
     [TestMethod]
     public void GetNumberOfPastries_ReturnsNumberOfPastries_Int()
     {
