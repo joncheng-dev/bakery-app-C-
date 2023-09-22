@@ -151,6 +151,76 @@ namespace BakeryApp.Tests
       int expectedTotal = 2;
       int actualTotal = Pastry.CalculatePastryCost();
       Assert.AreEqual(expectedTotal, actualTotal);   
-    }   
+    }
+
+    [TestMethod]
+    public void CalculatePastryCost_ReturnsTotalCostOfPastries2_Int()
+    {
+      int numPastriesOrdered = 2;
+      Pastry.NumOfPastries = numPastriesOrdered;
+      int expectedTotal = 4;
+      int actualTotal = Pastry.CalculatePastryCost();
+      Assert.AreEqual(expectedTotal, actualTotal);   
+    }
+
+    [TestMethod]
+    public void CalculatePastryCost_ReturnsTotalCostOfPastries3_Int()
+    {
+      int numPastriesOrdered = 3;
+      Pastry.NumOfPastries = numPastriesOrdered;
+      int expectedTotal = 6;
+      int actualTotal = Pastry.CalculatePastryCost();
+      Assert.AreEqual(expectedTotal, actualTotal);   
+    }
+
+    [TestMethod]
+    public void CalculatePastryCost_ReturnsTotalCostOfPastries4_Int()
+    {
+      int numPastriesOrdered = 4;
+      Pastry.NumOfPastries = numPastriesOrdered;
+      int expectedTotal = 6;
+      int actualTotal = Pastry.CalculatePastryCost();
+      Assert.AreEqual(expectedTotal, actualTotal);   
+    }
+
+    [TestMethod]
+    public void CalculatePastryCost_ReturnsTotalCostOfPastries5_Int()
+    {
+      int numPastriesOrdered = 5;
+      Pastry.NumOfPastries = numPastriesOrdered;
+      int expectedTotal = 8;
+      int actualTotal = Pastry.CalculatePastryCost();
+      Assert.AreEqual(expectedTotal, actualTotal);   
+    }
+
+    [TestMethod]
+    public void CalculatePastryCost_ReturnsTotalCostOfPastries6_Int()
+    {
+      int numPastriesOrdered = 6;
+      Pastry.NumOfPastries = numPastriesOrdered;
+      int expectedTotal = 10;
+      int actualTotal = Pastry.CalculatePastryCost();
+      Assert.AreEqual(expectedTotal, actualTotal);   
+    }
+
+    [TestMethod]
+    public void CalculatePastryCost_ReturnsTotalCostOfPastries7_Int()
+    {
+      int numPastriesOrdered = 7;
+      Pastry.NumOfPastries = numPastriesOrdered;
+      int expectedTotal = 12;
+      int actualTotal = Pastry.CalculatePastryCost();
+      Assert.AreEqual(expectedTotal, actualTotal);   
+    }
+
+    [TestMethod]
+    public void CalculatePastryCost_ReturnsTotalCostOfPastries8_Int()
+    {
+      int numPastriesOrdered = 8;
+      Pastry.NumOfPastries = numPastriesOrdered;
+      int expectedTotal = 12;
+      int actualTotal = Pastry.CalculatePastryCost();
+      Assert.AreEqual(expectedTotal, actualTotal);   
+    }    
   }
 }
