@@ -5,7 +5,6 @@ namespace BakeryApp.Models
   public class Pastry
   {
     public static int NumOfPastries { get; set; } = 0;
-
     // Passed in as a string, peels off two final digits, and returns them.
     public static string RetrieveUpToTwoFinalChars(string aNumberAsStringType)
     {
