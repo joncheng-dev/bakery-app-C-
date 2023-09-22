@@ -63,13 +63,73 @@ namespace BakeryApp.Tests
     }
 
     [TestMethod]
-    public void CalculateBreadCost_ReturnsTotalCostOfBread15_Int()
+    public void CalculateBreadCost_ReturnsTotalCostOf4Bread_Int()
     {
       int numOrdered = 4;
       Bread anOrderOfBread = new Bread(numOrdered);
       int expectedTotal = 15;
       int actualTotal = anOrderOfBread.CalculateBreadCost();
       Assert.AreEqual(expectedTotal, actualTotal);
-    }    
+    }
+
+    [TestMethod]
+    public void CalculateBreadCost_ReturnsTotalCostOf1Bread_Int()
+    {
+      int numOrdered = 1;
+      Bread anOrderOfBread = new Bread(numOrdered);
+      int expectedTotal = 5;
+      int actualTotal = anOrderOfBread.CalculateBreadCost();
+      Assert.AreEqual(expectedTotal, actualTotal);
+    }
+
+    [TestMethod]
+    public void CalculateBreadCost_ReturnsTotalCostOf2Bread_Int()
+    {
+      int numOrdered = 2;
+      Bread anOrderOfBread = new Bread(numOrdered);
+      int expectedTotal = 10;
+      int actualTotal = anOrderOfBread.CalculateBreadCost();
+      Assert.AreEqual(expectedTotal, actualTotal);
+    }
+
+    [TestMethod]
+    public void CalculateBreadCost_ReturnsTotalCostOf3Bread_Int()
+    {
+      int numOrdered = 3;
+      Bread anOrderOfBread = new Bread(numOrdered);
+      int expectedTotal = 10;
+      int actualTotal = anOrderOfBread.CalculateBreadCost();
+      Assert.AreEqual(expectedTotal, actualTotal);
+    }
+
+    [TestMethod]
+    public void CalculateBreadCost_ReturnsTotalCostOf5Bread_Int()
+    {
+      int numOrdered = 5;
+      Bread anOrderOfBread = new Bread(numOrdered);
+      int expectedTotal = 20;
+      int actualTotal = anOrderOfBread.CalculateBreadCost();
+      Assert.AreEqual(expectedTotal, actualTotal);
+    }
+
+    [TestMethod]
+    public void CalculateBreadCost_ReturnsTotalCostOf6Bread_Int()
+    {
+      int numOrdered = 6;
+      Bread anOrderOfBread = new Bread(numOrdered);
+      int expectedTotal = 20;
+      int actualTotal = anOrderOfBread.CalculateBreadCost();
+      Assert.AreEqual(expectedTotal, actualTotal);
+    }
+
+    [TestMethod]
+    public void CalculateBreadCost_ReturnsTotalCostOf7Bread_Int()
+    {
+      int numOrdered = 7;
+      Bread anOrderOfBread = new Bread(numOrdered);
+      int expectedTotal = 25;
+      int actualTotal = anOrderOfBread.CalculateBreadCost();
+      Assert.AreEqual(expectedTotal, actualTotal);
+    }        
   }
 }
