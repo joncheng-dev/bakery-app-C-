@@ -21,6 +21,16 @@ namespace BakeryApp.Tests
       int numPastriesOrdered = 2;
       Pastry.NumOfPastries = numPastriesOrdered;
       Assert.AreEqual(numPastriesOrdered, Pastry.NumOfPastries);      
+    }
+
+    [TestMethod]
+    public void CheckIfDivisibleByFour_ReturnsBoolFalse_Bool()
+    {
+      int numPastriesOrdered = 2;
+      Pastry.NumOfPastries = numPastriesOrdered;
+      bool expectedAnswer = false;
+      bool divisibleByFourResult = Pastry.CheckIfDivisibleByFour(Pastry.NumOfPastries);
+      Assert.AreEqual(expectedAnswer, divisibleByFourResult);
     }    
   }
 }
