@@ -8,5 +8,20 @@ namespace BakeryApp.Models
     {
       NumOfLoaves = userQuantity;
     }
+
+    public static bool CheckIfDivisibleByThree(int numberToCheck)
+    {
+      return false;
+    }
+
+    public int CalculateBreadCost()
+    {
+      int breadCost = 10;
+      // for (int i = 0; i < NumOfLoaves; i++)
+      // {
+        
+      // }
+      return breadCost;
+    }
   }
 }

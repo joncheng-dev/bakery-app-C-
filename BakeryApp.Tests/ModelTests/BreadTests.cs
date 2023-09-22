@@ -32,10 +32,24 @@ namespace BakeryApp.Tests
       Assert.AreEqual(changedNumOrdered, anOrderOfBread.NumOfLoaves);      
     }
 
-    // [TestMethod]
-    // public void CalculateBreadCost_ReturnsTotalCostOfBread_Int()
-    // {
+    [TestMethod]
+    public void CalculateBreadCost_ReturnsTotalCostOfBread_Int()
+    {
+      int numOrdered = 2;
+      Bread anOrderOfBread = new Bread(numOrdered);
+      int expectedTotal = 10;
+      int actualTotal = anOrderOfBread.CalculateBreadCost();
+      Assert.AreEqual(expectedTotal, actualTotal);
+    }
 
-    // }
+    [TestMethod]
+    public void CheckIfDivisibleByThree_ReturnsFalse_Bool()
+    {
+      int numOrdered = 2;
+      Bread anOrderOfBread = new Bread(numOrdered);
+      bool expectedAnswer = false;
+      bool divisibleByThreeResult = Bread.CheckIfDivisibleByThree(anOrderOfBread.NumOfLoaves);
+      Assert.AreEqual(expectedAnswer, divisibleByThreeResult);
+    }
   }
 }
