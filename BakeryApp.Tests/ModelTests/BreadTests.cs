@@ -45,7 +45,7 @@ namespace BakeryApp.Tests
     [TestMethod]
     public void CheckIfDivisibleByThree_ReturnsFalse_Bool()
     {
-      int numOrdered = 2;
+      int numOrdered = 11;
       Bread anOrderOfBread = new Bread(numOrdered);
       bool expectedAnswer = false;
       bool divisibleByThreeResult = Bread.CheckIfDivisibleByThree(anOrderOfBread.NumOfLoaves);
