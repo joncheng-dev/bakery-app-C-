@@ -44,7 +44,7 @@ namespace BakeryApp
     {
       Console.WriteLine($"Your order is: \n{numLoaves} loaves of bread \n{numPastries} pastries.\nIs this correct?");
       string userInput = Console.ReadLine();
-      if (userInput == "yes")
+      if (userInput.ToLower() == "yes")
       {
         ProcessOrderAndDisplayTotal(numLoaves, numPastries); 
       }
@@ -65,15 +65,7 @@ namespace BakeryApp
 
       int finalTotal = breadTotalCost + pastryTotalCost;
       Console.WriteLine($"Your total will be: ${finalTotal}.");
+      Console.WriteLine($"Thank you for your business!");
     }
   }
 }
-
-      // Bread newBreadOrder = new Bread(userBreadLoavesToInteger);
-      // int breadTotalCost = newBreadOrder.CalculateBreadCost();
-
-      // Pastry.NumOfPastries = userNumPastriesToInteger;
-      // int pastryTotalCost = Pastry.CalculatePastryCost();
-
-      // int finalTotal = breadTotalCost + pastryTotalCost;
-      // Console.WriteLine($"Your total will be: ${finalTotal}.");

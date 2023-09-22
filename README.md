@@ -1,6 +1,6 @@
 # Bakery App
 
-#### A console app for to determine costs for bread and pastry at a bakery. The user can enter how many loaves of bread and pieces of pastry they want, and the app will use algorithms to return a total cost.
+#### A simple console app for users to determine total costs for bread and pastry at Pierre's Bakery.
 
 #### By Jonathan Cheng
 
@@ -13,7 +13,9 @@
 
 ## Description
 
-^^^^
+- _The user can enter how many loaves of bread and pieces of pastry they wish to order. The app will use algorithms to calculate a total cost. The user may then choose to edit their order or confirm it._
+- _This console app was written using C#, run using .NET framework, and its business logic tested using MSTest._
+- _Key objectives include: C# basics such as using custom classes and namespaces, methods, auto-implemented properties, and test-driven development (TDD)._
 
 ## Setup/Installation Requirements
 
@@ -21,7 +23,7 @@ _1. Open your terminal (e.g., Terminal or GitBash)._
 
 _2. Navigate to where you want to place the cloned directory._
 
-_3. Clone the repository from the GitHub link by typing in this command:_
+_3. Clone the repository from the GitHub link by entering in this command:_
 
 > ```bash
 > $ git clone https://github.com/joncheng-dev/bakery-app-C-
