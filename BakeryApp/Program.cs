@@ -34,7 +34,7 @@ namespace BakeryApp
       int pastryTotalCost = Pastry.CalculatePastryCost();
 
       int finalTotal = breadTotalCost + pastryTotalCost;
-      Console.WriteLine($"Your total will be: {finalTotal}");
+      Console.WriteLine($"Your total will be: ${finalTotal}.");
     }
   }
 }
