@@ -24,7 +24,7 @@ namespace BakeryApp.Tests
     }
 
     [TestMethod]
-    public void RetrieveUpToTwoFinalChars_TakesANumberAsStringReturningFinalTwoChars_String()
+    public void RetrieveUpToTwoFinalChars_TakesANumber121AsStringReturningFinalTwoChars_String()
     {
       string numPastriesOrdered = "121";
       string expectedResult = "21";
@@ -32,6 +32,41 @@ namespace BakeryApp.Tests
       Assert.AreEqual(expectedResult, actualSubstring);      
     }
 
+    [TestMethod]
+    public void RetrieveUpToTwoFinalChars_TakesANumber1AsStringReturningFinalTwoChars_String()
+    {
+      string numPastriesOrdered = "1";
+      string expectedResult = "1";
+      string actualSubstring = Pastry.RetrieveUpToTwoFinalChars(numPastriesOrdered);
+      Assert.AreEqual(expectedResult, actualSubstring);      
+    }
+
+    [TestMethod]
+    public void RetrieveUpToTwoFinalChars_TakesANumber33AsStringReturningFinalTwoChars_String()
+    {
+      string numPastriesOrdered = "33";
+      string expectedResult = "33";
+      string actualSubstring = Pastry.RetrieveUpToTwoFinalChars(numPastriesOrdered);
+      Assert.AreEqual(expectedResult, actualSubstring);      
+    }
+
+    [TestMethod]
+    public void RetrieveUpToTwoFinalChars_TakesANumber009AsStringReturningFinalTwoChars_String()
+    {
+      string numPastriesOrdered = "009";
+      string expectedResult = "09";
+      string actualSubstring = Pastry.RetrieveUpToTwoFinalChars(numPastriesOrdered);
+      Assert.AreEqual(expectedResult, actualSubstring);      
+    }
+
+    [TestMethod]
+    public void RetrieveUpToTwoFinalChars_TakesANumber2073AsStringReturningFinalTwoChars_String()
+    {
+      string numPastriesOrdered = "2073";
+      string expectedResult = "73";
+      string actualSubstring = Pastry.RetrieveUpToTwoFinalChars(numPastriesOrdered);
+      Assert.AreEqual(expectedResult, actualSubstring);      
+    }
     // [TestMethod]
     // public void CheckIfDivisibleByFour_ReturnsBoolFalse_Bool()
     // {
