@@ -141,6 +141,16 @@ namespace BakeryApp.Tests
       bool expectedAnswer = false;
       bool divisibleByFourResult = Pastry.CheckIfDivisibleByFour(Pastry.NumOfPastries);
       Assert.AreEqual(expectedAnswer, divisibleByFourResult);
+    }
+
+    [TestMethod]
+    public void CalculatePastryCost_ReturnsTotalCostOfPastries1_Int()
+    {
+      int numPastriesOrdered = 1;
+      Pastry.NumOfPastries = numPastriesOrdered;
+      int expectedTotal = 2;
+      int actualTotal = Pastry.CalculatePastryCost();
+      Assert.AreEqual(expectedTotal, actualTotal);   
     }   
   }
 }

@@ -40,6 +40,23 @@ namespace BakeryApp.Models
         return false;
       }
     }
+
+    public static int CalculatePastryCost()
+    {
+      int totalCost = 0;
+      for(int i = 1; i <= NumOfPastries; i++)
+      {
+        if(CheckIfDivisibleByFour(i))
+        {
+          totalCost += 0;
+        }
+        else 
+        {
+          totalCost += 2;
+        }
+      }
+      return totalCost;      
+    }
   }
 }
 
