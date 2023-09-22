@@ -22,6 +22,16 @@ namespace BakeryApp.Tests
       Assert.AreEqual(numOrdered, resultOfGetAction);
     }
 
+    [TestMethod]
+    public void SetNumberOfLoaves_SetsNewValueForLoaves_Void()
+    {
+      int numOrdered = 2;
+      Bread anOrderOfBread = new Bread(numOrdered);
+      int changedNumOrdered = 4;
+      anOrderOfBread.NumOfLoaves = changedNumOrdered;
+      Assert.AreEqual(changedNumOrdered, anOrderOfBread.NumOfLoaves);      
+    }
+
     // [TestMethod]
     // public void CalculateBreadCost_ReturnsTotalCostOfBread_Int()
     // {

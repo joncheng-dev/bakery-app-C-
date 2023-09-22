@@ -2,7 +2,7 @@ namespace BakeryApp.Models
 {
   public class Bread
   {
-    public int NumOfLoaves { get; }
+    public int NumOfLoaves { get; set; }
 
     public Bread(int userQuantity)
     {
