@@ -2,6 +2,6 @@ namespace BakeryApp.Models
 {
   public class Pastry
   {
-    public static int NumOfPastries { get; } = 0;
+    public static int NumOfPastries { get; set; } = 0;
   }
 }

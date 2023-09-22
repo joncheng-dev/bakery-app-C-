@@ -1,5 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using BakeryApp.Models;
+using System;
 
 namespace BakeryApp.Tests
 {
@@ -14,12 +15,12 @@ namespace BakeryApp.Tests
       Assert.AreEqual(numPastriesOrdered, resultOfGetAction);
     }
     
-    // [TestMethod]
-    // public void SetNumberOfPastries_SetsValueToNumOfPastries_Void()
-    // {
-    //   int numPastriesOrdered = 2;
-    //   Pastry.NumOfPastries = numPastriesOrdered;
-    //   Assert.AreEqual(numPastriesOrdered, Pastry.NumOfPastries);      
-    // }    
+    [TestMethod]
+    public void SetNumberOfPastries_SetsValueToNumOfPastries_Void()
+    {
+      int numPastriesOrdered = 2;
+      Pastry.NumOfPastries = numPastriesOrdered;
+      Assert.AreEqual(numPastriesOrdered, Pastry.NumOfPastries);      
+    }    
   }
 }
