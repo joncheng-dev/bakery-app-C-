@@ -7,6 +7,11 @@ namespace BakeryApp.Tests
   [TestClass]
   public class PastryTests
   {
+    // public void Dispose()
+    // {
+    //   Pastry.NumOfPastries = 0;
+    // }
+
     [TestMethod]
     public void GetNumberOfPastries_ReturnsNumberOfPastries_Int()
     {
@@ -76,6 +81,66 @@ namespace BakeryApp.Tests
       bool expectedAnswer = false;
       bool divisibleByFourResult = Pastry.CheckIfDivisibleByFour(Pastry.NumOfPastries);
       Assert.AreEqual(expectedAnswer, divisibleByFourResult);
-    }    
+    }
+
+    [TestMethod]
+    public void CheckIfDivisibleByFour_ReturnsBoolFalseForNum22_Bool()
+    {
+      int numPastriesOrdered = 22;
+      Pastry.NumOfPastries = numPastriesOrdered;
+      bool expectedAnswer = false;
+      bool divisibleByFourResult = Pastry.CheckIfDivisibleByFour(Pastry.NumOfPastries);
+      Assert.AreEqual(expectedAnswer, divisibleByFourResult);
+    }
+
+    [TestMethod]
+    public void CheckIfDivisibleByFour_ReturnsBoolFalseForNum16_Bool()
+    {
+      int numPastriesOrdered = 16;
+      Pastry.NumOfPastries = numPastriesOrdered;
+      bool expectedAnswer = true;
+      bool divisibleByFourResult = Pastry.CheckIfDivisibleByFour(Pastry.NumOfPastries);
+      Assert.AreEqual(expectedAnswer, divisibleByFourResult);
+    }
+
+    [TestMethod]
+    public void CheckIfDivisibleByFour_ReturnsBoolFalseForNum4_Bool()
+    {
+      int numPastriesOrdered = 4;
+      Pastry.NumOfPastries = numPastriesOrdered;
+      bool expectedAnswer = true;
+      bool divisibleByFourResult = Pastry.CheckIfDivisibleByFour(Pastry.NumOfPastries);
+      Assert.AreEqual(expectedAnswer, divisibleByFourResult);
+    } 
+
+    [TestMethod]
+    public void CheckIfDivisibleByFour_ReturnsBoolFalseForNum144_Bool()
+    {
+      int numPastriesOrdered = 144;
+      Pastry.NumOfPastries = numPastriesOrdered;
+      bool expectedAnswer = true;
+      bool divisibleByFourResult = Pastry.CheckIfDivisibleByFour(Pastry.NumOfPastries);
+      Assert.AreEqual(expectedAnswer, divisibleByFourResult);
+    }
+
+    [TestMethod]
+    public void CheckIfDivisibleByFour_ReturnsBoolFalseForNum555_Bool()
+    {
+      int numPastriesOrdered = 555;
+      Pastry.NumOfPastries = numPastriesOrdered;
+      bool expectedAnswer = false;
+      bool divisibleByFourResult = Pastry.CheckIfDivisibleByFour(Pastry.NumOfPastries);
+      Assert.AreEqual(expectedAnswer, divisibleByFourResult);
+    }     
+
+    [TestMethod]
+    public void CheckIfDivisibleByFour_ReturnsBoolFalseForNum2398_Bool()
+    {
+      int numPastriesOrdered = 2398;
+      Pastry.NumOfPastries = numPastriesOrdered;
+      bool expectedAnswer = false;
+      bool divisibleByFourResult = Pastry.CheckIfDivisibleByFour(Pastry.NumOfPastries);
+      Assert.AreEqual(expectedAnswer, divisibleByFourResult);
+    }   
   }
 }
