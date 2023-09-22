@@ -40,11 +40,22 @@ namespace BakeryApp.Models
 
     public int CalculateBreadCost()
     {
-      int breadCost = 10;
-      // for (int i = 0; i < NumOfLoaves; i++)
-      // {
-        
-      // }
+      int breadCost = 0;
+      for (int i = 1; i <= NumOfLoaves; i++)
+      {
+        Console.WriteLine($"Currently looping at index: {i}");
+        if (CheckIfDivisibleByThree(i))
+        {
+          Console.WriteLine($"Index {i} will +0 to total");
+          breadCost += 0;
+        }
+        else 
+        {
+          Console.WriteLine($"Index {i} will +5 to total");
+          breadCost += 5;
+        }
+      }
+      Console.WriteLine($"Bread total cost is: {breadCost}");
       return breadCost;
     }
   }

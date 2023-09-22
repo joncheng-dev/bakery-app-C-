@@ -61,5 +61,15 @@ namespace BakeryApp.Tests
       bool divisibleByThreeResult = Bread.CheckIfDivisibleByThree(anOrderOfBread.NumOfLoaves);
       Assert.AreEqual(expectedAnswer, divisibleByThreeResult);
     }
+
+    [TestMethod]
+    public void CalculateBreadCost_ReturnsTotalCostOfBread15_Int()
+    {
+      int numOrdered = 4;
+      Bread anOrderOfBread = new Bread(numOrdered);
+      int expectedTotal = 15;
+      int actualTotal = anOrderOfBread.CalculateBreadCost();
+      Assert.AreEqual(expectedTotal, actualTotal);
+    }    
   }
 }
