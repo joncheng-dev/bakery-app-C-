@@ -67,14 +67,15 @@ namespace BakeryApp.Tests
       string actualSubstring = Pastry.RetrieveUpToTwoFinalChars(numPastriesOrdered);
       Assert.AreEqual(expectedResult, actualSubstring);      
     }
-    // [TestMethod]
-    // public void CheckIfDivisibleByFour_ReturnsBoolFalse_Bool()
-    // {
-    //   int numPastriesOrdered = 2;
-    //   Pastry.NumOfPastries = numPastriesOrdered;
-    //   bool expectedAnswer = false;
-    //   bool divisibleByFourResult = Pastry.CheckIfDivisibleByFour(Pastry.NumOfPastries);
-    //   Assert.AreEqual(expectedAnswer, divisibleByFourResult);
-    // }    
+
+    [TestMethod]
+    public void CheckIfDivisibleByFour_ReturnsBoolFalseForNum2_Bool()
+    {
+      int numPastriesOrdered = 2;
+      Pastry.NumOfPastries = numPastriesOrdered;
+      bool expectedAnswer = false;
+      bool divisibleByFourResult = Pastry.CheckIfDivisibleByFour(Pastry.NumOfPastries);
+      Assert.AreEqual(expectedAnswer, divisibleByFourResult);
+    }    
   }
 }
