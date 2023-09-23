@@ -34,10 +34,26 @@ namespace BakeryApp
       Console.WriteLine($"Number of Pastries desired:");
       string userNumPastries = Console.ReadLine();
 
-      int userBreadLoavesToInteger = Convert.ToInt32(userBreadLoaves);
-      int userNumPastriesToInteger = Convert.ToInt32(userNumPastries);
+      try
+      {
+        int userBreadLoavesToInteger = int.Parse(userBreadLoaves);
+        int userNumPastriesToInteger = int.Parse(userNumPastries);           
 
-      ConfirmOrEditOrder(userBreadLoavesToInteger, userNumPastriesToInteger);
+        if (userBreadLoavesToInteger <= 0 || userNumPastriesToInteger <= 0)
+        {
+          throw new ArgumentOutOfRangeException(nameof(userBreadLoavesToInteger), nameof(userNumPastriesToInteger), "Order quantity must be positive integers.");
+        }
+        else 
+        {
+          ConfirmOrEditOrder(userBreadLoavesToInteger, userNumPastriesToInteger);
+        }
+      }
+      catch(Exception ex)
+      {
+        Console.WriteLine("Error: {0}", ex.Message);
+        Console.WriteLine("Please re-run the app.");
+      }
+
     }
 
     static void ConfirmOrEditOrder(int numLoaves, int numPastries)
