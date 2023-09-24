@@ -13,18 +13,26 @@ namespace BakeryApp
 
     static void ShowGreeting()
     {
-      Console.WriteLine("*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
-      Console.WriteLine("*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
-      Console.WriteLine($"Welcome to Pierre's Bakery!");
-      Console.WriteLine($"We sell bread by the loaves, and single pastries");
-      Console.WriteLine("*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
-      Console.WriteLine("*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");      
-      Console.WriteLine($"Current deals:");
-      Console.WriteLine($"Bread: Buy 2, get 1 free. A single loaf costs $5.");
-      Console.WriteLine($"Pastry: Buy 3, get 1 free. A single pastry costs $2.");
-      Console.WriteLine("*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
-      Console.WriteLine("*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
-      Console.WriteLine($"If you are ready to order, complete the prompts as they come!");
+      Console.WriteLine(@"      ,   .     .                     .                         
+      | . |     |                     |                         
+      | ) ) ,-. | ,-. ,-. ;-.-. ,-.   |-  ,-.                   
+      |/|/  |-' | |   | | | | | |-'   |   | |                   
+      ' '   `-' ' `-' `-' ' ' ' `-'   `-' `-'                   
+                                                                
+      ;-.                    p       ,-.      ,               . 
+      |  ) o                         |  )     |               | 
+      |-'  . ,-. ;-. ;-. ,-.   ,-.   |-<  ,-: | , ,-. ;-. . . | 
+      |    | |-' |   |   |-'   `-.   |  ) | | |<  |-' |   | |   
+      '    ' `-' '   '   `-'   `-'   `-'  `-` ' ` `-' '   `-| o 
+                                                          `-'   ");
+      Console.WriteLine("*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*\n");                                                        
+      Console.WriteLine($"We're proud to serve our farm to table bread and pastries.\n");
+      Console.WriteLine("*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*\n");            
+      Console.WriteLine($"Pricing:\n");
+      Console.WriteLine($"Bread:  A single loaf ----- $5. Buy 2, get 1 free.");
+      Console.WriteLine($"Pastry: A single pastry --- $2. Buy 3, get 1 free.\n");
+      Console.WriteLine("*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*\n");  
+      Console.WriteLine($"To order, please complete the prompts below as they appear!\n");
     }
 
     static void HandleUserOrder()
@@ -50,15 +58,18 @@ namespace BakeryApp
       }
       catch(Exception ex)
       {
-        Console.WriteLine("Error: {0}", ex.Message);
-        Console.WriteLine("Please re-run the app.");
+        Console.WriteLine("\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n");
+        Console.WriteLine("Error:\n{0}", ex.Message);
+        Console.WriteLine("\n>>> Please re-run the app. <<<");
+        Console.WriteLine("\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
       }
 
     }
 
     static void ConfirmOrEditOrder(int numLoaves, int numPastries)
     {
-      Console.WriteLine($"Your order is: \n{numLoaves} loaves of bread \n{numPastries} pastries.\nIs this correct?");
+      Console.WriteLine("\n*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*\n");
+      Console.WriteLine($"Your current order is: \n{numLoaves} loaves of bread \n{numPastries} pastries\n\nIs this correct?");
       string userInput = Console.ReadLine();
       if (userInput.ToLower() == "yes")
       {
@@ -66,7 +77,8 @@ namespace BakeryApp
       }
       else 
       {
-        Console.WriteLine("Let's fix your order. Please enter your order again:");
+        Console.WriteLine("*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*\n");
+        Console.WriteLine("Let's fix your order. Please enter your order again:\n");
         HandleUserOrder();
       }
     }
@@ -80,7 +92,8 @@ namespace BakeryApp
       int pastryTotalCost = Pastry.CalculatePastryCost();
 
       int finalTotal = breadTotalCost + pastryTotalCost;
-      Console.WriteLine($"Your total will be: ${finalTotal}.");
+      Console.WriteLine("\n*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*\n");  
+      Console.WriteLine($"Order:\n{newBreadOrder.NumOfLoaves} loaves of bread \n{Pastry.NumOfPastries} pastries \n\nYour total will be: ${finalTotal}.");
       Console.WriteLine($"Thank you for your business!");
     }
   }

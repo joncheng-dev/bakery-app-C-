@@ -1,6 +1,6 @@
 # Bakery App
 
-#### A simple console app for users to determine total costs for bread and pastry at Pierre's Bakery.
+#### A C# console app for users to determine total costs for bread and pastry at Pierre's Bakery.
 
 #### By Jonathan Cheng
 
@@ -49,7 +49,7 @@ _4c. To run tests, navigate to the project's test directory and execute the comm
 
 ## Known Bugs
 
-- _None yet._
+- _Please report any bugs if you find any with a message to joncheng.dev@gmail.com_
 
 ## License
 
